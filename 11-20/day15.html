@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+    var secondsUntilEaten = sharkDistance/sharkSpeed;
+    var secondsUntilSafe = pontoonDistance/youSpeed;
+    var sharkEatsDolphin = sharkDistance/(sharkSpeed/2);
+    if (secondsUntilSafe < secondsUntilEaten) {
+        return "Alive!";
+    } else if (dolphin && (secondsUntilSafe < sharkEatsDolphin)) {
+        return "Alive!";
+    } else {
+        return "Shark Bait!";
+    }
+}
+
+
+
+
+</script>
+</body>
+</html>
